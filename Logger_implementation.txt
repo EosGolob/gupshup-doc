@@ -1,0 +1,38 @@
+1. What is log  
+   Logging is a basic practice in software development process that offers developers an understanding of what is happening within a program.
+   Spring Boot contains different logging levels to classify the log messages.
+   The common log levels are DEBUG, INFO, WARN, ERROR, and TRACE. 
+   We can choose the suitable log level for a specific message based on our requirement & its importance.
+
+	        <dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+			</dependency>
+		
+2. what is profile in spring boot. 
+	there are many profile in spring boot like dev, QA,production etc.
+	Profile help use to work on diffrent environment in application like 
+	dev environment has different database QA environment have diffrent db
+	this all things we can achived by profile setting.
+implementation 
+Step 1 copy application to property file and rename the file like 
+       application-pro.properties
+	 2 define one properties in spring-boot application.properties file 
+	     ex - spring.Profile.active=prod;
+	 Note:- if we define any profile in main application.properties file the higher perferance is the set profile name;
+	 
+	 
+3 what is @configuration properties.
+
+  Spring Boot @ConfigurationProperties lets developers map or bind the entire external configuration values in .properties or .yml files to Java objects.
+  
+4 what is Actuator 
+
+ Step 1  we have to add one dependency spring boot Starter Actuator;
+ 
+      2 we have to hit the url with endpoint /actuator
+	  Note:- if we enable actuator it will expose only default endpoint health.
+	  
+     if we want more endpoint we have do configuration in application.properties files.
+     properties Name in file = management.endpoints.web.exposure.include=*;	 
+	         
